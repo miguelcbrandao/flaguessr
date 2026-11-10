@@ -21,11 +21,34 @@ def next_country(game: Game) -> Country | None:
     game.current = game.remaining.pop()
     return game.current
 
+def answer_right(game: Game) -> None:
+    game.score += 10
+    
+
+def answer_wrong(game: Game) -> None:
+    game.score -= 5
+    game.lives -= 1
+    if game.score < 0:
+        game.score = 0
+
+def is_over(game: Game) -> bool:
+    return game.lives == 0 or not game.remaining
+
 if __name__ == "__main__":
     from countries import load_countries
     game = new_game(load_countries())
-    print(next_country(game))
-    print(next_country(game))
-    print(next_country(game))
-    print(len(game.remaining))
- 
+    answer_right(game)
+    print(game.score, game.lives, is_over(game))
+    answer_right(game)
+    print(game.score, game.lives, is_over(game))
+    answer_wrong(game)
+    print(game.score, game.lives, is_over(game))
+    answer_wrong(game)
+    print(game.score, game.lives, is_over(game))
+    answer_wrong(game)
+    print(game.score, game.lives, is_over(game))
+    game3 = new_game(load_countries()[:1])
+    next_country(game3)
+    print(is_over(game3))
+    answer_right(game3)
+    print(is_over(game3))
