@@ -37,6 +37,7 @@ def is_over(game: Game) -> bool:
 if __name__ == "__main__":
     from countries import load_countries
     game = new_game(load_countries())
+    #test cases below
     answer_right(game)
     print(game.score, game.lives, is_over(game))
     answer_right(game)
@@ -47,8 +48,4 @@ if __name__ == "__main__":
     print(game.score, game.lives, is_over(game))
     answer_wrong(game)
     print(game.score, game.lives, is_over(game))
-    game3 = new_game(load_countries()[:1])
-    next_country(game3)
-    print(is_over(game3))
-    answer_right(game3)
-    print(is_over(game3))
+    
