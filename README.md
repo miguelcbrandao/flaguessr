@@ -1,2 +1,2 @@
 # Flag quiz
-this is an open-source flag quiz app in active development. If you have anything to contribute feelfree to look at the code, or just try the quiz out!
+this is an open-source flag quiz app in active development. If you have anything to contribute feel free to look at the code, or just try the quiz out!
