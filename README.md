@@ -4,4 +4,3 @@ this is an open-source flag quiz app in active development. If you have anything
 =======
 # Flag quiz
 this is an open-source flag quiz app in active development. If you have anything to contribute feel free to look at the code, or just try the quiz out!
->>>>>>> b0ed034eaa60df3807ed9848396872e73a8108e7
