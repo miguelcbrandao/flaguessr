@@ -33,19 +33,4 @@ def answer_wrong(game: Game) -> None:
 
 def is_over(game: Game) -> bool:
     return game.lives == 0 or not game.remaining
-
-if __name__ == "__main__":
-    from countries import load_countries
-    game = new_game(load_countries())
-    #test cases below
-    answer_right(game)
-    print(game.score, game.lives, is_over(game))
-    answer_right(game)
-    print(game.score, game.lives, is_over(game))
-    answer_wrong(game)
-    print(game.score, game.lives, is_over(game))
-    answer_wrong(game)
-    print(game.score, game.lives, is_over(game))
-    answer_wrong(game)
-    print(game.score, game.lives, is_over(game))
     
